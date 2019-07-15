@@ -2,32 +2,37 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.submission-form {
+  max-width: 44.25rem;
+  height: 18rem;
+  margin: 2rem auto;
+  border: 3px solid #e74c3c;
+  background: url("https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-42312.jpg?size=626&ext=jpg");
+  padding: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+label {
+  display: block;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  display: block;
+  padding: .4rem;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  border: 0;
+  height: 2rem;
+  width: auto;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  background: #343050;
+  color: #fffc;
+  text-transform: uppercase;
+
+}
+
+.money {
+  font-size: 60rem;
 }
