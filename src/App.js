@@ -1,48 +1,17 @@
 import React, { useState } from "react";
-import TeamMembers from './TeamMenbers'
-import "./App.css";
+import data from "./data/data";
+
+import "./styles/App.css";
+
+import Form from "./components/Form";
 
 function App() {
-  const [user, setUser] = useState({ username: "", password: "" });
-
-  const handleNameChange = event => {
-    setUser({ ...user, username: event.target.value });
-  };
-
-  const handlePasswordChange = event => {
-    setUser({ ...user, password: event.target.value });
-  };
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    console.log(user.name);
-    console.log(user.password);
-  };
+  const [teamList, updateTeamList] = useState(data);
+  console.log("Team List: ", teamList);
 
   return (
     <div className="App">
-      {console.log(user)}
-      <form onSubmit={event => handleSubmit(event)}>
-        <label>
-          Username:
-          <input
-            type="text"
-            name="username"
-            placeholder='Enter Name'
-            onChange={event => handleNameChange(event)}
-          />
-        </label>
-        <label>
-          Password:
-          <input
-            type="text"
-            name="password"
-            placeholder="password"
-            onChange={event => handlePasswordChange(event)}
-          />
-        </label>
-        <button>Submit!</button>
-      </form>
+      <Form />
     </div>
   );
 }
