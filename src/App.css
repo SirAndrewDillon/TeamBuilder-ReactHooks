@@ -6,7 +6,7 @@
   max-width: 44.25rem;
   height: 18rem;
   margin: 2rem auto;
-  border: 3px solid #e74c3c;
+  border: 3px solid rgba(81, 203, 238, 1);
   background: url("https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-42312.jpg?size=626&ext=jpg");
   padding: 2rem;
 }
@@ -21,6 +21,42 @@ input {
   width: 100%;
 }
 
+input[type=text] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus  {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+input[type=email] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=email]:focus  {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
 .btn {
   border: 0;
   height: 2rem;
@@ -33,6 +69,13 @@ input {
 
 }
 
-.money {
-  font-size: 60rem;
+table {
+  max-width: 40rem;
+  height: 5rem;
+  margin: 2em auto;
+  border: 3px solid #e74c3c;
+  background: url("https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-42312.jpg?size=626&ext=jpg");
+  padding: 2rem;
 }
+
+
