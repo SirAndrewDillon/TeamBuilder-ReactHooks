@@ -6,8 +6,11 @@
   max-width: 44.25rem;
   height: 18rem;
   margin: 2rem auto;
-  border: 3px solid rgba(81, 203, 238, 1);
-  background: url("https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-42312.jpg?size=626&ext=jpg");
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  /* margin: 5px 1px 3px 0px; */
+  border: 1px solid rgba(81, 203, 238, 1);
+  background: url("https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-42312.jpg?size=626&ext=jpg") no-repeat;
   padding: 2rem;
 }
 
@@ -22,6 +25,8 @@ input {
 }
 
 input[type=text] {
+  width: 50%;
+  height: 2em;
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
   -ms-transition: all 0.30s ease-in-out;
@@ -40,6 +45,8 @@ input[type=text]:focus  {
 }
 
 input[type=email] {
+   height: 2em;
+   width: 50%;
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
   -ms-transition: all 0.30s ease-in-out;
@@ -61,21 +68,48 @@ input[type=email]:focus  {
   border: 0;
   height: 2rem;
   width: auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-right: 2rem;
   background: #343050;
   color: #fffc;
   text-transform: uppercase;
-
 }
 
-table {
-  max-width: 40rem;
-  height: 5rem;
-  margin: 2em auto;
-  border: 3px solid #e74c3c;
-  background: url("https://img.freepik.com/free-photo/design-space-paper-textured-background_53876-42312.jpg?size=626&ext=jpg");
-  padding: 2rem;
+table {  
+  margin: 25px auto;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 740px; 
+  border-collapse: 
+  collapse; border-spacing: 0; 
 }
+
+td, th {  
+  border: 1px solid transparent; /* No more visible border */
+  height: 40px; 
+  transition: all 0.3s;  /* Simple transition for hover effect */
+}
+
+th {  
+  background: rgba(81, 203, 238, 1);  /* Darken header a bit */
+  font-weight: bold;
+}
+
+td {  
+  background: #FAFAFA;
+  text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */        
+tr:nth-child(even) td { background: #F1F1F1; }   
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */        
+tr:nth-child(odd) td { background: #FEFEFE; }  
+
+tr td:hover { background: rgba(81, 203, 238, 1); color: #FFF; }  
+/* Hover cell effect! */
+
+
+
 
 

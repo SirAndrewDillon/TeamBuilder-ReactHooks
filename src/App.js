@@ -7,22 +7,34 @@ import './App.css'
 import Form from "./components/Form";
 
 export default function App() {
-  const [teamList, updateTeamList] = useState(data);
-  console.log("Team List: ", teamList);
+  const [team, updateTeam] = useState(data);
+  const [memberToEdit, updateMemberToEdit] = useState({ name: "" });
+
+  const handleSubmit = (event, member) => {
+    event.preventDefault();
+    updateTeam([...team, member]);
+  };
+
+  const editMember = member => {
+    console.log("Edit this member: ", member);
+  };
 
   return (
     <>
-      <table>
-        <tbody>
+      <table className="content-table">
+        <thead>
           <tr>
-            <th>Name:</th>
-            <th>Email:</th>
-            <th>Phone:</th>
-            <th>Role:</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Role</th>
           </tr>
-          {data.map(member => {
+          {team.map(member => {
             return (
-              <tr key={member.email}>
+              <tr
+                key={member.email}
+                onClick={event => updateMemberToEdit(member)}
+              >
                 <td>{member.name}</td>
                 <td>{member.email}</td>
                 <td>{member.phone}</td>
@@ -30,9 +42,14 @@ export default function App() {
               </tr>
             );
           })}
-        </tbody>
+        </thead>
       </table>
-      <Form />
+      <Form
+        teamList={team}
+        handleSubmit={handleSubmit}
+        memberToEdit={memberToEdit}
+        editMember={editMember}
+      />
     </>
   );
 }
